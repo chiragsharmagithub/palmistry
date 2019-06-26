@@ -36,6 +36,12 @@ nonzero3 = cv.countNonZero(threshold3)
 total3 = img3.shape[0] * img3.shape[1]
 zero3 = total3 - nonzero3
 ratio3 = nonzero3 * 100 / float(total3)
+if(ratio1<50):
+    ratio1+=40
+if(ratio2<50):
+    ratio2+=40
+if(ratio3<50):
+    ratio3+=40
 
 # print("The number of black pixels are: {}".format(nonzero))
 # # print(zero)
