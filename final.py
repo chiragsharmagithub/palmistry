@@ -2,9 +2,9 @@ import cv2 as cv
 import numpy as np
 import matplotlib.pyplot as plt
 
-img1 = cv.imread("images/qproj1_crop.png")
-img2 = cv.imread("images/qproj2_crop.png")
-img3 = cv.imread("images/qproj3_crop.png")
+img1 = cv.imread("images/heartLine.png")
+img2 = cv.imread("images/headLine.png")
+img3 = cv.imread("images/lifeLine.png")
 
 
 

@@ -15,10 +15,10 @@ def main():
 		img2 = img.crop(area2)
 		img3 = img.crop(area3)
 		# Saved in the same relative location
-		img_default.save("images/qproj_crop.png")
-		img1.save("images/qproj1_crop.png")	# Heart line - heart_parameter
-		img2.save("images/qproj2_crop.png")	# Head line---head_parameter
-		img3.save("images/qproj3_crop.png") # life line---age_parameter
+		img_default.save("images/palm.png")
+		img1.save("images/heartLine.png")	# Heart line - heart_parameter
+		img2.save("images/headLine.png")	# Head line---head_parameter
+		img3.save("images/lifeLine.png") # life line---age_parameter
 		# Heart Line - shows a person's attitude to love and quality of love.
 		# Head Line - reveals a person's wisdom, belief, attitude, thinking ability, strain capacity, creative ability as well as abilities of memory, self-control and more. 
 		# LIfe line - age & mainly reflects a person's physical vitality and life energy
