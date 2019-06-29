@@ -6,19 +6,12 @@ img1 = cv.imread("images/heartLine.png")
 img2 = cv.imread("images/headLine.png")
 img3 = cv.imread("images/lifeLine.png")
 
-
-
-# b,g,r = cv.split(img)
-# img = cv.merge([r,g,b])
 gray1 = cv.cvtColor(img1, cv.COLOR_BGR2GRAY)
 gray2 = cv.cvtColor(img2, cv.COLOR_BGR2GRAY)
 gray3 = cv.cvtColor(img3, cv.COLOR_BGR2GRAY)
 ret1, threshold1 = cv.threshold(gray1,160,255,cv.THRESH_BINARY)
 ret2, threshold2 = cv.threshold(gray2,160,255,cv.THRESH_BINARY)
 ret3, threshold3 = cv.threshold(gray3,160,255,cv.THRESH_BINARY)
-
-
-# gray_image = cv.cvtColor(img, cv.COLOR_BGR2GRAY)
 
 nonzero1 = cv.countNonZero(threshold1)
 total1 = img1.shape[0] * img1.shape[1]
@@ -43,22 +36,22 @@ if(ratio2<50):
 if(ratio3<50):
     ratio3+=40
 
-# print("The number of black pixels are: {}".format(nonzero))
-# # print(zero)
-# print(total)
-# print(zero)
-print("Heart line values: {}".format(ratio1))
-print("Head line values: {}".format(ratio2))
-print("Life Line: {}".format(ratio3))
+if(ratio1>80){
+	print("Your attitude towards love and quality of love is little complicated & have a deep affection towards your partner.")
+}
+else{
+	print("Your love and marriage life go smoothly & you could have a good personal relationship.")
+}
 
-# age_parameter = 140*ratio/100
-
-# print("The age parameter is {}".format(age_parameter))
-
-#These value are true & are based on ideal conditions means...if you eat healthy + physically fit + mostly panic free
-
-
-# plt.imshow(gray_image,'gray')
-# # plt.imshow(gray)
-# plt.xticks(), plt.yticks()
-# plt.show()
+if(ratio2>80){
+	print("It indicates you are smart & you have a very clear mind. You are responsive, good at thinking and more considerate than others.")
+}
+else{
+	print("you are usually slow to respond, hasty, careless, indecisive and impulsive. However, your advantage is that you could finish the assigned task in a systematic way.")
+}
+if(ratio3>80){
+	print("You are suited to a life of physical fitness/labor and are good at sports. highly resistant to disease.")
+}
+else{
+	print("You are good at using mind & you are susceptible to illness.")
+}
